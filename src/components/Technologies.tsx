@@ -1,6 +1,6 @@
 import TechCard from "./TechCard";
 import c from "../assets/c.png";
-import cpp from "../assets/C++.png";
+import cpp from "../assets/c++.png";
 import express from "../assets/express.png";
 import git from "../assets/git.png";
 import github from "../assets/github.png";
