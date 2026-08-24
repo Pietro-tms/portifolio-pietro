@@ -58,8 +58,8 @@ const Projects = () => {
               cadastroCasaDoHamburguer,
               pedidosCasaDoHamburguer,
             ]}
-            technologies={["React", "Typescript"]}
-            github="https://chatgpt.com/c/6a846ec3-48a0-83e9-bfbc-a6062106f0e7"
+            technologies={["React", "Typescript", "Node", "Express", "JWT", "Bcrypt", "Postgres", "Prisma"]}
+            github="https://github.com/Pietro-tms/casa-do-hamburguer"
           />
         </motion.div>
       </div>
