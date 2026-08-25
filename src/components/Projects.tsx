@@ -9,6 +9,9 @@ import homeVacinakids from "../assets/home-vacinakids.png";
 import campanhasVaconakids from "../assets/campanhas-vacinakids.png";
 import criancasVaconakids from "../assets/criancas-vacinakids.png";
 import historicoVaconakids from "../assets/historico-vacinakids.png";
+import recipeRb from "../assets/recipe-rb.png";
+import searchRb from "../assets/search-rb.png";
+import recipesRb from "../assets/recipes-rb.png";
 
 import { motion } from "motion/react";
 
@@ -89,6 +92,16 @@ const Projects = () => {
             technologies={["Angular", "Typescript", "Ionic"]}
             github="https://github.com/Pietro-tms/vacinacao-infantil"
             demo="https://vacina-kids.netlify.app"
+            key={2}
+          />
+          <ProjectCard
+            title="Recipe Finder"
+            description="Buscador de receitas que consome dados dA API TheMealDB."
+            images={[searchRb, recipeRb, recipesRb]}
+            technologies={["HTML", "CSS", "JavaScript","Fetch"]}
+            github="https://github.com/Pietro-tms/Buscador-de-receitas"
+            demo="https://pietro-tms.github.io/Buscador-de-receitas/"
+            key={3}
           />
         </motion.div>
       </div>
