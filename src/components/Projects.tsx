@@ -5,6 +5,11 @@ import homeAdmCasaDoHamburguer from "../assets/home-adm-casa-do-hamburguer.png";
 import loginCasaDoHamburguer from "../assets/login-casa-do-hamburguer.png";
 import cadastroCasaDoHamburguer from "../assets/cadastro-casa-do-hamburguer.png";
 import pedidosCasaDoHamburguer from "../assets/pedidos-casa-do-hamburguer.png";
+import homeVacinakids from "../assets/home-vacinakids.png";
+import campanhasVaconakids from "../assets/campanhas-vacinakids.png";
+import criancasVaconakids from "../assets/criancas-vacinakids.png";
+import historicoVaconakids from "../assets/historico-vacinakids.png";
+
 import { motion } from "motion/react";
 
 const Projects = () => {
@@ -58,8 +63,32 @@ const Projects = () => {
               cadastroCasaDoHamburguer,
               pedidosCasaDoHamburguer,
             ]}
-            technologies={["React", "Typescript", "Node", "Express", "JWT", "Bcrypt", "Postgres", "Prisma"]}
+            technologies={[
+              "React",
+              "Typescript",
+              "Node",
+              "Express",
+              "JWT",
+              "Bcrypt",
+              "Postgres",
+              "Prisma",
+            ]}
             github="https://github.com/Pietro-tms/casa-do-hamburguer"
+            key={1}
+          />
+
+          <ProjectCard
+            title="VacinaKids"
+            description="Interface de um sistema de controle da situação vacinal dos filhos de uma família. O projeto conta com histórico de vacinas aplicadas, alertas de atraso e campanhas ativas."
+            images={[
+              homeVacinakids,
+              campanhasVaconakids,
+              criancasVaconakids,
+              historicoVaconakids,
+            ]}
+            technologies={["Angular", "Typescript", "Ionic"]}
+            github="https://github.com/Pietro-tms/vacinacao-infantil"
+            demo="https://vacina-kids.netlify.app"
           />
         </motion.div>
       </div>
