@@ -73,7 +73,7 @@ const Projects = () => {
               "Express",
               "JWT",
               "Bcrypt",
-              "Postgres",
+              "PostgreSQL",
               "Prisma",
             ]}
             github="https://github.com/Pietro-tms/casa-do-hamburguer"
