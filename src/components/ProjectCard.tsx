@@ -19,7 +19,6 @@ const ProjectCard = ({
   demo,
 }: ProjectCardProps) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
 
   const previousImage = () => {
     setCurrentImage((current) =>
@@ -34,7 +33,6 @@ const ProjectCard = ({
   };
 
   const goToImage = (index: number) => {
-    if (index === currentImage) return;
     setCurrentImage(index);
   };
 
@@ -44,40 +42,42 @@ const ProjectCard = ({
         <div className="relative z-10 w-full lg:w-[68%]">
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#222529]">
             <div className="relative aspect-[16/10] w-full overflow-hidden">
-              <AnimatePresence
-                initial={false}
-                custom={currentImage}
-                mode="sync"
-              >
+              <AnimatePresence initial={false} mode="sync">
                 <motion.img
                   key={currentImage}
                   src={images[currentImage]}
                   alt={`Imagem ${currentImage + 1} do projeto ${title}`}
                   className="absolute inset-0 h-full w-full object-cover object-top"
                   drag={images.length > 1 ? "x" : false}
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.85}
-                  dragMomentum={true}
-                  onDragStart={() => setIsDragging(true)}
+                  dragConstraints={{
+                    left: 0,
+                    right: 0,
+                  }}
+                  dragElastic={0.25}
+                  dragMomentum={false}
                   onDragEnd={(_, info) => {
-                    setIsDragging(false);
-
-                    const swipeDistance = 70;
-                    const swipeVelocity = 400;
+                    const swipeDistance = 50;
+                    const swipeVelocity = 300;
 
                     if (
                       info.offset.x < -swipeDistance ||
                       info.velocity.x < -swipeVelocity
                     ) {
                       nextImage();
-                    } else if (
+                      return;
+                    }
+
+                    if (
                       info.offset.x > swipeDistance ||
                       info.velocity.x > swipeVelocity
                     ) {
                       previousImage();
                     }
                   }}
-                  initial={{ opacity: 0, x: 40 }}
+                  initial={{
+                    opacity: 0,
+                    x: 20,
+                  }}
                   animate={{
                     opacity: 1,
                     x: 0,
@@ -88,7 +88,7 @@ const ProjectCard = ({
                   }}
                   exit={{
                     opacity: 0,
-                    x: -40,
+                    x: -20,
                     transition: {
                       duration: 0.22,
                       ease: [0.4, 0, 1, 1],
@@ -131,11 +131,7 @@ const ProjectCard = ({
                   {images.map((_, index) => (
                     <button
                       key={index}
-                      onClick={() => {
-                        if (!isDragging) {
-                          goToImage(index);
-                        }
-                      }}
+                      onClick={() => goToImage(index)}
                       className={`h-1.5 rounded-full transition-all ${
                         index === currentImage
                           ? "w-6 bg-white"
