@@ -84,7 +84,7 @@ const About = () => {
             <motion.img
               src={pietro}
               alt="Pietro Strimber"
-              className="relative h-40 w-40 rounded-full border-2 border-primary/30 object-cover drop-shadow-[0_0_35px_rgba(52,186,171,0.3)] md:h-56 md:w-56"
+              className="relative h-40 w-40 rounded-full border-2 border-primary/30 object-cover drop-shadow-[0_0_40px_rgba(52,186,171,0.12)] md:h-56 md:w-56"
               style={{
                 rotateX,
                 rotateY,
