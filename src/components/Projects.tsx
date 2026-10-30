@@ -122,7 +122,7 @@ const Projects = () => {
           />
           <ProjectCard
             title="Recipe Finder"
-            description="Buscador de receitas que consome dados dA API TheMealDB."
+            description="Buscador de receitas que consome dados da API TheMealDB."
             images={[searchRb, recipeRb, recipesRb]}
             technologies={["HTML", "CSS", "JavaScript", "Fetch"]}
             github="https://github.com/Pietro-tms/Buscador-de-receitas"
