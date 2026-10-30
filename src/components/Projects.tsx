@@ -12,6 +12,15 @@ import historicoVaconakids from "../assets/historico-vacinakids.png";
 import recipeRb from "../assets/recipe-rb.png";
 import searchRb from "../assets/search-rb.png";
 import recipesRb from "../assets/recipes-rb.png";
+import RedacaoClaraVisaoGeralProfessor from "../assets/redacao-clara-visao-geral-professor.png";
+import RedacaoClaraVisaoGeralAluno from "../assets/redacao-clara-visao-geral-aluno.png";
+import RedacaoClaraTurmasProfessor from "../assets/redacao-clara-turmas-professor.png";
+import RedacaoClaraTurmasAluno from "../assets/redacao-clara-turmas-aluno.png";
+import RedacaoClaraRedacoesAluno from "../assets/redacao-clara-redacoes-aluno.png";
+import RedacaoClaraPropostasProfessor from "../assets/redacao-clara-propostas-professor.png";
+import RedacaoClaraLogin from "../assets/redacao-clara-login.png";
+import RedacaoClaraFilaDeCorrecaoProfessor from "../assets/redacao-clara-fila-de-correcao-professor.png";
+import RedacaoClaraCadastroAluno from "../assets/redacao-clara-cadastro-aluno.png";
 
 import { motion } from "motion/react";
 
@@ -56,6 +65,23 @@ const Projects = () => {
           }}
         >
           <ProjectCard
+            title="Redação Clara"
+            description="Aplicação Web para atividades de redação ENEM e vestibulares. O professor comsegue publica propostas para turmas e corrigir redações. Alunos recebem propostas, escrevem redações e acessa devolutivas."
+            images={[
+              RedacaoClaraVisaoGeralProfessor,
+              RedacaoClaraTurmasProfessor,
+              RedacaoClaraPropostasProfessor,
+              RedacaoClaraFilaDeCorrecaoProfessor,
+              RedacaoClaraVisaoGeralAluno,
+              RedacaoClaraTurmasAluno,
+              RedacaoClaraRedacoesAluno,
+              RedacaoClaraLogin,
+              RedacaoClaraCadastroAluno,
+            ]}
+            technologies={["React", "Typescript", "Firebase", "TailwindCSS", "Cloud Firestore", "Authentication"]}
+          ></ProjectCard>
+
+          <ProjectCard
             title="Casa do Hamburguer"
             description="Aplicação web de vendas de produtos para hamburgueria. Conta com cardápio digital, gerência de pedidos e painel administrador"
             images={[
@@ -98,7 +124,7 @@ const Projects = () => {
             title="Recipe Finder"
             description="Buscador de receitas que consome dados dA API TheMealDB."
             images={[searchRb, recipeRb, recipesRb]}
-            technologies={["HTML", "CSS", "JavaScript","Fetch"]}
+            technologies={["HTML", "CSS", "JavaScript", "Fetch"]}
             github="https://github.com/Pietro-tms/Buscador-de-receitas"
             demo="https://pietro-tms.github.io/Buscador-de-receitas/"
             key={3}

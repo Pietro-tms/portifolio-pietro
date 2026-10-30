@@ -47,7 +47,7 @@ const ProjectCard = ({
                   key={currentImage}
                   src={images[currentImage]}
                   alt={`Imagem ${currentImage + 1} do projeto ${title}`}
-                  className="absolute inset-0 h-full w-full object-cover object-top"
+                  className="absolute inset-0 h-full w-full object-contain"
                   drag={images.length > 1 ? "x" : false}
                   dragConstraints={{
                     left: 0,
@@ -109,48 +109,50 @@ const ProjectCard = ({
 
             {images.length > 1 && (
               <>
-                <div className="absolute bottom-4 left-4 flex gap-2">
-                  <button
-                    onClick={previousImage}
-                    className="hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md transition hover:bg-black/70 md:flex"
-                    aria-label="Imagem anterior"
-                  >
-                    ←
-                  </button>
-
-                  <button
-                    onClick={nextImage}
-                    className="hidden h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md transition hover:bg-black/70 md:flex"
-                    aria-label="Próxima imagem"
-                  >
-                    →
-                  </button>
-                </div>
-
-                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                  {images.map((_, index) => (
+                <div className="flex items-center justify-between gap-2 border-t border-white/10 px-3 py-2">
+                  <div className="flex gap-2">
                     <button
-                      key={index}
-                      onClick={() => goToImage(index)}
-                      className={`h-1.5 rounded-full transition-all ${
-                        index === currentImage
-                          ? "w-6 bg-white"
-                          : "w-1.5 bg-white/40"
-                      }`}
-                      aria-label={`Ir para imagem ${index + 1}`}
-                    />
-                  ))}
-                </div>
+                      onClick={previousImage}
+                      className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/40 text-white transition hover:bg-black/70"
+                      aria-label="Imagem anterior"
+                    >
+                      ←
+                    </button>
 
-                <div className="absolute left-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs text-white backdrop-blur-md">
-                  {currentImage + 1} / {images.length}
+                    <button
+                      onClick={nextImage}
+                      className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black/40 text-white transition hover:bg-black/70"
+                      aria-label="Próxima imagem"
+                    >
+                      →
+                    </button>
+                  </div>
+
+                  <div className="flex flex-1 justify-center gap-1">
+                    {images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToImage(index)}
+                        className={`h-1.5 rounded-full transition-all ${
+                          index === currentImage
+                            ? "w-6 bg-white"
+                            : "w-1.5 bg-white/40"
+                        }`}
+                        aria-label={`Ir para imagem ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="whitespace-nowrap text-xs text-gray-300">
+                    {currentImage + 1} / {images.length}
+                  </div>
                 </div>
               </>
             )}
           </div>
         </div>
 
-        <div className="relative z-20 mt-[-15px] ml-auto w-[92%] rounded-xl border border-white/10 bg-[#1B1D20]/95 p-6 backdrop-blur-xl md:mt-[-60px] md:w-[75%] md:p-8 lg:ml-[-8%] lg:mt-0 lg:w-[42%] lg:p-10">
+        <div className="relative z-0 mt-[-15px] ml-auto w-[92%] rounded-xl border border-white/10 bg-[#1B1D20]/95 p-6 backdrop-blur-xl md:mt-[-60px] md:w-[75%] md:p-8 md:pt-[calc(60px+2rem)] lg:ml-[-8%] lg:mt-0 lg:w-[42%] lg:p-10 lg:pl-[calc(8%+2.5rem)] lg:pt-10">
           <div className="mb-8 flex items-center gap-3">
             <span className="h-px w-8 bg-primary" />
 

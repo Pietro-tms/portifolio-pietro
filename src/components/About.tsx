@@ -106,7 +106,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base font-normal leading-7 md:text-lg"
+            className="text-base font-normal leading-7 md:text-base"
           >
             Sou um desenvolvedor FullStack apaixonado por tecnologia.
             Atualmente, curso Engenharia de Software na Universidade Estadual de
@@ -132,7 +132,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-base font-normal leading-7 md:text-lg"
+            className="text-base font-normal leading-7 md:text-base"
           >
             Aprender novas tecnologias não é um desafio para mim, mas sim uma
             oportunidade de crescimento.
