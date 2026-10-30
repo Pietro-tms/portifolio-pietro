@@ -66,7 +66,7 @@ const Projects = () => {
         >
           <ProjectCard
             title="Redação Clara"
-            description="Aplicação Web para atividades de redação ENEM e vestibulares. O professor comsegue publica propostas para turmas e corrigir redações. Alunos recebem propostas, escrevem redações e acessa devolutivas."
+            description="Aplicação Web para atividades de redação ENEM e vestibulares. O professor comsegue publicar propostas para turmas e corrigir redações. Alunos recebem propostas, escrevem redações e acessam devolutivas."
             images={[
               RedacaoClaraVisaoGeralProfessor,
               RedacaoClaraTurmasProfessor,
